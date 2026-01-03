@@ -15,8 +15,8 @@ const Header = ({ toggle }) => {
       <div style={{ display: "flex", alignItems: "center" }}>
         <Logo to="/" style={{ marginRight: "30px" }}>
           <img
-            src="/logo.png"
-            alt="logo"
+            src={process.env.PUBLIC_URL + "/logo.png"}
+            alt="Logo"
             style={{ height: "100px", width: "100px" }}
           />
         </Logo>
