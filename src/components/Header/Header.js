@@ -1,56 +1,72 @@
 import React from "react";
-import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from "./HeaderElements";
+import {
+  Nav,
+  Logo,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  MobileMenu,
+  MobileLink,
+} from "./HeaderElements";
 
-const Header = ({ toggle }) => {
+const Header = ({ toggle, isOpen }) => {
   return (
-    <Nav
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 20px",
-      }}
-    >
-      {/* Left Section: Logo & Navigation Menu */}
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Logo to="/" style={{ marginRight: "30px" }}>
-          <img
-            src={process.env.PUBLIC_URL + "/logo.png"}
-            alt="Logo"
-            style={{ height: "100px", width: "100px" }}
-          />
+    <>
+      <Nav>
+        {/* LOGO */}
+        <Logo>
+          <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Logo" />
         </Logo>
-        <NavMenu style={{ display: "flex" }}>
-          <NavLink className="menu-item" to="/" style={{ marginLeft: "180px" }}>
+
+        {/* DESKTOP MENU */}
+        <NavMenu>
+          <NavLink className="menu-item" to="home" smooth>
             Home
           </NavLink>
-          <NavLink className="menu-item" to="projects">
+          <NavLink className="menu-item" to="projects" smooth>
             Projects
           </NavLink>
-          <NavLink className="menu-item" to="about">
+          <NavLink className="menu-item" to="about" smooth>
             About
           </NavLink>
-          <NavLink className="menu-item" to="contact">
+          <NavLink className="menu-item" to="contact" smooth>
             Contact
           </NavLink>
         </NavMenu>
-      </div>
 
-      {/* Right Section: Resume Button & Menu Toggle */}
-      <div style={{ display: "flex", alignItems: "center" }}>
+        {/* RESUME BUTTON */}
         <NavBtn>
           <a
             className="btn PrimaryBtn"
-            href="https://drive.google.com/file/d/1y-k6lO792puTzafCjvqx61qhmFSVzFzW/view?usp=drivesdkz"
+            href="https://drive.google.com/file/d/1y-k6lO792puTzafCjvqx61qhmFSVzFzW/view"
             target="_blank"
             rel="noopener noreferrer"
           >
             Resume
           </a>
         </NavBtn>
+
+        {/* HAMBURGER */}
         <Bars onClick={toggle} />
-      </div>
-    </Nav>
+      </Nav>
+
+      {/* MOBILE MENU */}
+      <MobileMenu isOpen={isOpen}>
+        <MobileLink to="home" smooth onClick={toggle}>
+          Home
+        </MobileLink>
+        <MobileLink to="projects" smooth onClick={toggle}>
+          Projects
+        </MobileLink>
+        <MobileLink to="about" smooth onClick={toggle}>
+          About
+        </MobileLink>
+        <MobileLink to="contact" smooth onClick={toggle}>
+          Contact
+        </MobileLink>
+      </MobileMenu>
+    </>
   );
 };
 

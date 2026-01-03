@@ -9,41 +9,37 @@ import {
   ContactWrapper,
 } from "./AboutElements";
 import ScrollAnimation from "react-animate-on-scroll";
+
 function About() {
   return (
     <ContactWrapper id="about">
       <div className="Container">
         <div className="SectionTitle">About Me</div>
+
         <div className="BigCard">
-          <ScrollAnimation animateIn="fadeInLeft">
-            <Image src="/profile.jpg" alt="Himanshu" />
-          </ScrollAnimation>
+          {/* 🔥 IMAGE WITHOUT ANIMATION */}
+          <Image src={process.env.PUBLIC_URL + "/profile.jpg"} alt="Himanshu" />
+
           <div className="AboutBio">
-            <ScrollAnimation animateIn="fadeInLeft">
+            <ScrollAnimation animateIn="fadeInLeft" animateOnce>
               Hello! My name is <strong>Himanshu Jhanwar</strong>. A Full Stack
               Developer specializing in the MERN stack. With a strong foundation
               in data structures and algorithms (DSA), I build scalable and
               optimized web applications that deliver seamless user experiences.
-              My expertise extends to data science and machine learning,
-              allowing me to develop intelligent and data-driven solutions. I am
-              passionate about solving complex problems and constantly refining
-              my coding skills to write efficient and high-performance code.
+              My expertise extends to data science and machine learning.
             </ScrollAnimation>
 
             <br />
 
-            <ScrollAnimation animateIn="fadeInLeft">
+            <ScrollAnimation animateIn="fadeInLeft" animateOnce>
               Beyond development, I enjoy exploring new technologies,
               participating in hackathons, and contributing to innovative
-              projects. Whether it's designing intuitive frontends, architecting
-              robust backends, or leveraging data to drive insights, I am always
-              eager to push boundaries and create impactful digital solutions.
-              Explore my work and let's connect to build something amazing!
+              projects. Let’s connect and build something amazing!
             </ScrollAnimation>
 
             <br />
 
-            <ScrollAnimation animateIn="fadeInLeft">
+            <ScrollAnimation animateIn="fadeInLeft" animateOnce>
               <div className="tagline2">
                 I have become confident using the following technologies:
               </div>
@@ -51,8 +47,8 @@ function About() {
 
             <Technologies>
               {stackList.map((stack, index) => (
-                <ScrollAnimation animateIn="fadeInLeft" key={index}>
-                  <Tech key={index} className="tech">
+                <ScrollAnimation animateIn="fadeInLeft" animateOnce key={index}>
+                  <Tech className="tech">
                     <TechImg src={stack.img} alt={stack.name} />
                     <TechName>{stack.name}</TechName>
                   </Tech>

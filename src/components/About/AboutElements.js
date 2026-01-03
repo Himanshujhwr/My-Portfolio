@@ -1,19 +1,32 @@
 import styled from "@emotion/styled";
 
+/* ================= WRAPPER ================= */
+
 export const ContactWrapper = styled.div`
   margin-top: 2rem;
 `;
 
+/* ================= PROFILE IMAGE ================= */
+
 export const Image = styled.img`
   display: block;
-  width: 180px; /* Increase size */
-  height: 180px; /* Ensure proportional scaling */
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1rem auto; /* bottom margin is IMPORTANT */
   padding: 0;
-  border-radius: 50%; /* Keeps it circular */
-  object-fit: cover; /* Ensures the image fills the space properly */
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* 🔥 MOBILE FIX */
+  @media (max-width: 768px) {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.25rem;
+  }
 `;
+
+/* ================= TECHNOLOGIES ================= */
+
 export const Technologies = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +35,8 @@ export const Technologies = styled.div`
   margin-left: auto;
   margin-bottom: -2rem;
 `;
+
+/* ================= TECH ITEM ================= */
 
 export const Tech = styled.div`
   display: flex;
@@ -32,11 +47,15 @@ export const Tech = styled.div`
   margin-bottom: 2rem;
 `;
 
+/* ================= TECH ICON ================= */
+
 export const TechImg = styled.img`
   height: 40px;
   width: 40px;
   padding-bottom: 5px;
 `;
+
+/* ================= TECH NAME ================= */
 
 export const TechName = styled.div`
   font-size: 14px;
