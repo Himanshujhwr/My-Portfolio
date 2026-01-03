@@ -7,7 +7,7 @@ export const ProjectList = [
     description:
       "AI-based plant disease prediction system using deep learning. Trained a ResNet-based CNN model on 70K+ leaf images to classify 15+ plant disease categories with high accuracy. Designed to assist farmers in early disease detection and crop health monitoring.",
     tech_stack: ["Python", "PyTorch", "CNN", "ResNet", "OpenCV"],
-    github_url: "https://github.com/Himanshujhwr/Plant-Disease-Recognition",
+    github_url: "https://github.com/Himanshujhwr/PlantDisease99.14Accuracy",
     demo_url: "",
   },
   {
@@ -32,7 +32,7 @@ export const ProjectList = [
     description:
       "Designed a normalized PostgreSQL database for Spotify-style listening data. Implemented complex SQL queries using CTEs and window functions to extract insights and optimize query performance on large datasets.",
     tech_stack: ["PostgreSQL", "SQL", "pgAdmin", "Data Analysis"],
-    github_url: "",
+    github_url: "https://github.com/Himanshujhwr/Spotify_SQL",
     demo_url: "",
   },
   {
