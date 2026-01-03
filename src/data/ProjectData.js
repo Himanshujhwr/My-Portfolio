@@ -2,7 +2,7 @@
 
 export const ProjectList = [
   {
-    img: "/GreenCure.png",
+    img: process.env.PUBLIC_URL + "/GreenCure.png",
     title: "GreenCure",
     description:
       "AI-based plant disease prediction system using deep learning. Trained a ResNet-based CNN model on 70K+ leaf images to classify 15+ plant disease categories with high accuracy. Designed to assist farmers in early disease detection and crop health monitoring.",
@@ -11,7 +11,7 @@ export const ProjectList = [
     demo_url: "",
   },
   {
-    img: "/edusage.png",
+    img: process.env.PUBLIC_URL + "/edusage.png",
     title: "EduSage – AI Course Generator",
     description:
       "Developed an AI-driven course generation platform that creates personalized learning paths using Gemini API. Implemented secure authentication and optimized PostgreSQL queries to improve dashboard performance and user experience.",
@@ -27,7 +27,7 @@ export const ProjectList = [
     demo_url: "",
   },
   {
-    img: "/spotify-sql.png",
+    img: process.env.PUBLIC_URL + "/spotify-sql.png",
     title: "Spotify Data Analysis (SQL Project)",
     description:
       "Designed a normalized PostgreSQL database for Spotify-style listening data. Implemented complex SQL queries using CTEs and window functions to extract insights and optimize query performance on large datasets.",
@@ -36,7 +36,7 @@ export const ProjectList = [
     demo_url: "",
   },
   {
-    img: "/aegis-home.png",
+    img: process.env.PUBLIC_URL + "/aegis-home.png",
     title: "AEGIS HOME – Smart & Secure Living (Capstone)",
     description:
       "IoT-enabled smart home system integrating safety, surveillance, and automation. Designed system architecture focusing on human presence detection, door security, and future-ready scalability for smart living environments.",
