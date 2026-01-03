@@ -18,8 +18,8 @@ export const Nav = styled.nav`
 
 export const Logo = styled.div`
   img {
-    width: 47px;
-    height: 47px;
+    width: 87px;
+    height: 87px;
   }
 `;
 

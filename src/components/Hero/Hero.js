@@ -76,7 +76,7 @@ function Hero() {
           </HeroRight>
         </HeroWrapper>
         {showScrollDown && (
-          <ScrollAnimation animateIn="flipInX" offset={0}>
+          <ScrollAnimation animateIn="flipInX" offset={1}>
             <ScrollDown to="projects" id="scrollDown">
               <ScrollLink>
                 Scroll down
